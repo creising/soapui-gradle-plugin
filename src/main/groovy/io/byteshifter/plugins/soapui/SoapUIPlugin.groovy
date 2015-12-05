@@ -23,6 +23,7 @@ class SoapUIPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
+        
         // Create and install the extension object
         SoapUIPluginExtension soapUIPluginExtension = project.extensions.create( 'soapui', SoapUIPluginExtension )
         soapUIPluginExtension.extensions.create( 'tool', SoapUIToolConvention )
