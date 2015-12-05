@@ -9,7 +9,7 @@ apply from: "${rootDir}/gradle/jacoco.gradle"
 
 description 'Gradle plugin for running SoapUI projects'
 group 'org.urbanbyte'
-version = '0.3'
+version = '0.4'
 targetCompatibility = 1.6
 sourceCompatibility = 1.6
 
@@ -92,7 +92,6 @@ dependencies {
     }
     runtime group: 'swingx', name: 'swingx', version:'soapui'
     runtime group: 'commons-codec', name: 'commons-codec', version:'1.3'
-    runtime group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.1.7'
     runtime group: 'rhino', name: 'js', version:'1.7R2'
     runtime group: 'saxon', name: 'saxon', version:'9.1.0.8j'
     runtime group: 'saxon', name: 'saxon-dom', version:'9.1.0.8j'
