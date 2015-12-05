@@ -9,7 +9,7 @@ apply from: "${rootDir}/gradle/jacoco.gradle"
 
 description 'Gradle plugin for running SoapUI projects'
 group 'org.urbanbyte'
-version = '0.4'
+version = '0.4.1'
 targetCompatibility = 1.6
 sourceCompatibility = 1.6
 
@@ -43,93 +43,22 @@ dependencies {
         exclude group: 'org.codehaus.groovy'
     }
     
-    // TODO this is a catch all for all the SOAP-UI jars
-    // effort should be made to narrow this list down to what
-    // we need to run the plugin.
-    // NOTE the cajo and jtidy jars have incorrect POMs. Devs will need
-    // to download them into a flatDir until a better fix is made
-    runtime group: 'xmlbeans', name: 'xbean', version:'fixed-2.4.0'
-    runtime group: 'xmlbeans', name: 'xbean_xpath', version:'2.4.0'
-    runtime group: 'xmlbeans', name: 'xmlpublic', version:'2.4.0'
-    runtime group: 'javax.xml.bind', name: 'jsr173_api', version:'1.0'
-    runtime group: 'com.google.guava', name: 'guava', version:'14.0'
-    runtime group: 'commons-collections', name: 'commons-collections', version:'3.2.1'
-    runtime group: 'commons-lang', name: 'commons-lang', version:'2.4'
-    runtime group: 'commons-io', name: 'commons-io', version:'2.4'
-    runtime group: 'log4j', name: 'log4j', version:'1.2.14'
-    runtime group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    runtime group: 'com.smartbear.utils.analytics', name: 'analytics-core', version:'5.2.1'
-    runtime group: 'com.smartbear.utils.analytics', name: 'out-app-analytics-provider', version:'5.2.1'
-    runtime group: 'com.jgoodies', name: 'forms', version:'1.0.7'
-    runtime group: 'com.jgoodies', name: 'looks', version:'2.2.0'
-    runtime group: 'com.jgoodies', name: 'binding', version:'2.0.1'
-    runtime group: 'com.fifesoft', name: 'rsyntaxtextarea', version:'2.5.0'
-    runtime group: 'jetty', name: 'jetty', version:'6.1.26'
-    runtime group: 'jetty', name: 'jetty-util', version:'6.1.26'
-    runtime group: 'jetty', name: 'servlet-api', version:'2.5-20081211'
-    runtime group: 'org.apache.ws.security', name: 'wss4j', version:'1.6.16'
-    runtime group: 'net.sourceforge.htmlunit', name: 'htmlunit', version:'2.7'
-    runtime group: 'org.w3c.css', name: 'sac', version:'1.3'
-    runtime group: 'net.sourceforge.htmlunit', name: 'htmlunit-core-js', version:'2.7'
-    runtime group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.1.1'
-    runtime group: 'org.apache.httpcomponents', name: 'httpmime', version:'4.1.1'
-    runtime group: 'org.apache.httpcomponents', name: 'httpclient-cache', version:'4.1.1'
-    runtime group: 'org.apache.httpcomponents', name: 'httpcore', version:'4.1.1'
-    runtime group: 'org.apache.httpcomponents', name: 'httpcore-nio', version:'4.1.1'
-    runtime group: 'org.apache.oltu.oauth2', name: 'org.apache.oltu.oauth2.client', version:'0.31'
-    runtime group: 'org.apache.oltu.oauth2', name: 'org.apache.oltu.oauth2.httpclient4', version:'0.31'
-    runtime group: 'org.apache.maven', name: 'maven-plugin-api', version:'2.0'
-    runtime group: 'javax.activation', name: 'activation', version:'1.1'
-    runtime group: 'javax.mail', name: 'mail', version:'1.4'
-    runtime group: 'wsdl4j', name: 'wsdl4j', version:'1.6.2-fixed'
-    runtime group: 'commons-ssl', name: 'not-yet-commons-ssl', version:'0.3.11'
-    runtime group: 'commons-cli', name: 'commons-cli', version:'1.2'
-    runtime group: 'commons-beanutils', name: 'commons-beanutils', version:'1.7.0'
-    runtime group: 'json', name: 'json-lib', version:'2.2.2-jdk15'
-    runtime group: 'ezmorph', name: 'ezmorph', version:'1.0.5'
-    runtime(group: 'xom', name: 'xom', version:'1.1') {
-        exclude(module: 'xercesImpl')
-    }
-    runtime group: 'swingx', name: 'swingx', version:'soapui'
-    runtime group: 'commons-codec', name: 'commons-codec', version:'1.3'
-    runtime group: 'rhino', name: 'js', version:'1.7R2'
-    runtime group: 'saxon', name: 'saxon', version:'9.1.0.8j'
-    runtime group: 'saxon', name: 'saxon-dom', version:'9.1.0.8j'
-    runtime group: 'xmlunit', name: 'xmlunit', version:'1.2'
-    runtime group: 'xalan', name: 'xalan', version:'2.7.1'
-    runtime group: 'bouncycastle', name: 'bcprov-jdk15', version:'144'
-    runtime group: 'javax.jms', name: 'jms', version:'1.1'
-    runtime group: 'hermesjms', name: 'hermes', version:'1.14'
-    runtime group: 'amf', name: 'flex-messaging-common', version:'1.0'
-    runtime group: 'amf', name: 'flex-messaging-core', version:'1.0'
-    runtime group: 'amf', name: 'flex-messaging-opt', version:'1.0'
-    runtime group: 'amf', name: 'flex-messaging-proxy', version:'1.0'
-    runtime group: 'amf', name: 'flex-messaging-remoting', version:'1.0'
-    runtime group: 'thoughtworks', name: 'xstream', version:'1.3.1'
-    runtime group: 'net.sourceforge.cssparser', name: 'cssparser', version:'0.9.5'
-    runtime group: 'net.sourceforge.nekohtml', name: 'nekohtml', version:'1.9.14'
-    runtime group: 'org.samba.jcifs', name: 'jcifs', version:'1.2.9'
-    runtime group: 'l2fprod', name: 'l2fprod-common-directorychooser', version:'7.3'
-    runtime group: 'l2fprod', name: 'l2fprod-common-fontchooser', version:'7.3'
-    runtime group: 'org.apache.santuario', name: 'xmlsec', version:'1.4.5'
-    runtime group: 'org.apache.xerces', name: 'xml-apis', version:'2.9.1'
-    runtime group: 'xalan', name: 'serializer', version:'2.7.1'
-    runtime group: 'org.apache.ws.commons.util', name: 'ws-commons-util', version:'1.0.2'
-    runtime group: 'com.btr', name: 'proxy-vole', version:'20131209'
-    runtime group: 'com.jayway.jsonpath', name: 'json-path', version:'0.9.1'
-    runtime group: 'commons-httpclient', name: 'commons-httpclient', version:'3.1'
-    runtime group: 'org.sonatype.install4j', name: 'i4jruntime', version:'5.1.14'
-    runtime group: 'org.codehaus.mojo', name: 'animal-sniffer-annotations', version:'1.11'
-    runtime group: 'org.reflections', name: 'reflections', version:'0.9.9-RC1'
-    runtime(group: 'com.google.code.findbugs', name: 'annotations', version:'2.0.0') {
-       /* This dependency was originally in the Maven provided scope, but the project was not of type war.
-       This behavior is not yet supported by Gradle, so this dependency has been converted to a runtime dependency.
-       Please review and delete this closure when resolved. */
-    }
-    runtime(group: 'com.google.code.findbugs', name: 'jsr305', version:'2.0.0') {
-       /* This dependency was originally in the Maven provided scope, but the project was not of type war.
-       This behavior is not yet supported by Gradle, so this dependency has been converted to a runtime dependency.
-       Please review and delete this closure when resolved. */
+    configurations.all {
+    resolutionStrategy {
+        //failOnVersionConflict()
+        force 'log4j:log4j:1.2.10',
+                'commons-codec:commons-codec:1.4',
+                'commons-io:commons-io:1.4',
+                'org.apache.httpcomponents:httpcore:4.2.5',
+                'org.apache.httpcomponents:httpclient:4.2.5',
+                'commons-logging:commons-logging:1.1.1',
+                'commons-lang:commons-lang:2.4',
+                'xalan:xalan:2.7.1',
+                'xml-apis:xml-apis:1.3.04',
+                'junit:junit:4.10',
+                'xom:xom:1.1',
+                'org.apache.santuario:xmlsec:1.4.5'
+       }
     }
 }
 
