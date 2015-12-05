@@ -4,6 +4,10 @@
 
 The plugin provides tasks for running SoapUI tests and mocks during a Gradle build.
 
+The plugin is largely based off of the [byte-shifter plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin)
+execpt it support specifiying multiple test suites running all tests in each suite.
+
+
 
 ## Build Status
 
@@ -88,7 +92,6 @@ To configure the SoapUI load test task you can choose to set the following prope
 
 * `projectFile` : Specified the name of the SoapUI project file to use
 * `testSuite` : Specifies the name of the TestSuite to run
-* `testCase` : Specifies the name of the TestCase to run
 * `loadTest` : Specifies the name of the LoadTest to run
 * `limit` : Overrides the limit of executed LoadTests
 * `endpoint` : Overrides the service endpoint to be invoked by any TestRequests
@@ -133,7 +136,7 @@ To configure the SoapUI load test task you can choose to set the following prope
 soapui {
     test {
         projectFile = 'sample-soapui-project.xml'
-        testSuite = 'OleTest'
+        testSuite = ['TestSuite1', 'TestSuite2']
         printReport = true
         junitReport = true
     }
