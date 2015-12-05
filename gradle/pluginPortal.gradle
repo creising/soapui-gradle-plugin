@@ -21,7 +21,7 @@ pluginBundle {
 
     plugins {
         dbDeployPlugin {
-            id = 'io.byteshifter.soapui'
+            id = 'org.urbanbyte.soapui'
             displayName = 'Gradle plugin for running SoapUI projects'
         }
     }

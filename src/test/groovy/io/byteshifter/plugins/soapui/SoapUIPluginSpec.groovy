@@ -9,7 +9,7 @@ import nebula.test.PluginProjectSpec
  * @author Sion Williams
  */
 class SoapUIPluginSpec extends PluginProjectSpec  {
-    static final String PLUGIN_ID = 'io.byteshifter.soapui'
+    static final String PLUGIN_ID = 'org.urbanbyte.soapui'
 
     @Override
     String getPluginName() {

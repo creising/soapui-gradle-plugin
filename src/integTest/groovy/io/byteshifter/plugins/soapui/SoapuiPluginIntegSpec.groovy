@@ -17,7 +17,7 @@ class SoapuiPluginIntegSpec extends IntegrationSpec   {
     def 'apply plugin, setup and run SoapUI test which passes'() {
         setup:
         buildFile << '''
-            apply plugin: 'io.byteshifter.soapui'
+            apply plugin: 'org.urbanbyte.soapui'
 
             soapui{
                 test{
@@ -38,7 +38,7 @@ class SoapuiPluginIntegSpec extends IntegrationSpec   {
     def 'apply plugin, setup and run SoapUI test which fails'() {
         setup:
         buildFile << '''
-            apply plugin: 'io.byteshifter.soapui'
+            apply plugin: 'org.urbanbyte.soapui'
 
             soapui{
                 test{

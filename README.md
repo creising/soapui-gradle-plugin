@@ -4,15 +4,16 @@
 
 The plugin provides tasks for running SoapUI tests and mocks during a Gradle build.
 
-The plugin is largely based off of the [byte-shifter plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin)
-execpt it supporst specifiying multiple test suites with all test running within each suite.
-
-
+The plugin is built upon the [byte-shifter soapui plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin).
+This implementation supports running multiple test suits in one command.
 
 ## Build Status
 
 [![Build Status](https://travis-ci.org/creising/soapui-gradle-plugin.svg)](https://travis-ci.org/creising/soapui-gradle-plugin)
 
+### Provided plugins
+
+    apply plugin: 'org.urbanbyte.soapui'
 
 ## Tasks
 
@@ -55,7 +56,6 @@ To configure the SoapUI test task you can choose to set the following properties
 
 * `projectFile` : Specified the name of the SoapUI project file to use
 * `testSuite` : Specifies the name of the TestSuite to run
-* `testCase` : Specifies the name of the TestCase to run
 * `endpoint` : Overrides the service endpoint to be invoked by any TestRequests
 * `host` : Overrides the target host:port to be invoked by any TestRequests
 * `username` : Overrides the username used by any TestRequests run
@@ -81,6 +81,7 @@ To configure the SoapUI load test task you can choose to set the following prope
 
 * `projectFile` : Specified the name of the SoapUI project file to use
 * `testSuite` : Specifies the name of the TestSuite to run
+* `testCase` : Specifies the name of the TestCase to run
 * `loadTest` : Specifies the name of the LoadTest to run
 * `limit` : Overrides the limit of executed LoadTests
 * `endpoint` : Overrides the service endpoint to be invoked by any TestRequests
@@ -143,8 +144,8 @@ soapui {
 
 ## Contribute
 
-- Issue Tracker: [github.com/byte-shifter-ltd/soapui-gradle-plugin/issues](https://github.com/byte-shifter-ltd/soapui-gradle-plugin/issues)
-- Source Code: [github.com/byte-shifter-ltd/soapui-gradle-plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin)
+- Issue Tracker: [https://github.com/creising/soapui-gradle-plugin/issues](https://github.com/creising/soapui-gradle-plugin/issues)
+- Source Code: [https://github.com/creising/soapui-gradle-plugin](https://github.com/creising/soapui-gradle-plugin)
 
 
 ## License
