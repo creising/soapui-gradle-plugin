@@ -5,7 +5,7 @@
 The plugin provides tasks for running SoapUI tests and mocks during a Gradle build.
 
 The plugin is largely based off of the [byte-shifter plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin)
-execpt it support specifiying multiple test suites running all tests in each suite.
+execpt it supporst specifiying multiple test suites with all test running within each suite.
 
 
 
