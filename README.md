@@ -11,6 +11,12 @@ This implementation supports running multiple test suits in one command.
 
 [![Build Status](https://travis-ci.org/creising/soapui-gradle-plugin.svg)](https://travis-ci.org/creising/soapui-gradle-plugin)
 
+## Usage
+
+This plugin is now hosted in the Gradle Plugin Portal. Please see their website for more information:
+
+[Gradle Plugin Portal](https://plugins.gradle.org/plugin/org.urbanbyte.soapui)
+
 ### Provided plugins
 
     apply plugin: 'org.urbanbyte.soapui'
