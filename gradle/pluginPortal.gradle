@@ -14,8 +14,8 @@ buildscript {
 apply plugin: "com.gradle.plugin-publish"
 
 pluginBundle {
-    website = 'https://github.com/byte-shifter-ltd/soapui-gradle-plugin'
-    vcsUrl = 'https://github.com/byte-shifter-ltd/soapui-gradle-plugin'
+    website = 'https://github.com/creising/soapui-gradle-plugin
+    vcsUrl = 'https://github.com/creising/soapui-gradle-plugin'
     description = 'Gradle plugin for running SoapUI projects'
     tags = ['soapui', 'testing', 'soap', 'rest']
 
