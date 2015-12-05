@@ -11,18 +11,7 @@ execpt it support specifiying multiple test suites running all tests in each sui
 
 ## Build Status
 
-[![Build Status](https://travis-ci.org/byte-shifter-ltd/soapui-gradle-plugin.svg)](https://travis-ci.org/byte-shifter-ltd/soapui-gradle-plugin)
-
-
-## Usage
-
-This plugin is now hosted in the Gradle Plugin Portal. Please see their website for more information:
-
-[Gradle Plugin Portal](https://plugins.gradle.org/plugin/io.byteshifter.soapui)
-
-### Provided plugins
-
-    apply plugin: 'io.byteshifter.soapui'
+[![Build Status](https://travis-ci.org/creising/soapui-gradle-plugin.svg)](https://travis-ci.org/creising/soapui-gradle-plugin)
 
 
 ## Tasks
