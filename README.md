@@ -7,6 +7,8 @@ The plugin provides tasks for running SoapUI tests and mocks during a Gradle bui
 The plugin is built upon the [byte-shifter soapui plugin](https://github.com/byte-shifter-ltd/soapui-gradle-plugin).
 This implementation supports running multiple test suits in one command.
 
+You can find an example [here](https://github.com/creising/soapui-plugin-example-)
+
 ## Build Status
 
 [![Build Status](https://travis-ci.org/creising/soapui-gradle-plugin.svg)](https://travis-ci.org/creising/soapui-gradle-plugin)

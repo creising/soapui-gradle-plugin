@@ -9,7 +9,7 @@ apply from: "${rootDir}/gradle/jacoco.gradle"
 
 description 'Gradle plugin for running SoapUI projects'
 group 'org.urbanbyte'
-version = '0.4.1'
+version = '0.4.3'
 targetCompatibility = 1.6
 sourceCompatibility = 1.6
 
