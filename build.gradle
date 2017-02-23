@@ -26,6 +26,7 @@ repositories {
 }
 
 dependencies {
+
     compile localGroovy()
     compile gradleApi()
     
@@ -78,5 +79,5 @@ pluginBundle {
 }
 
 wrapper {
-    gradleVersion = 3.3
+    gradleVersion = 2.3
 }
