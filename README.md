@@ -1,3 +1,5 @@
+Please note that this project is no longer maintained.
+
 # Gradle SoapUI plugin
 
 ![SoapUI Logo](http://www.soapui.org/images/stories/homepage/soapui_logo.png)
